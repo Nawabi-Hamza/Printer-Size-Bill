@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #000;
+        line-height: 1.6;
+        /* padding: 20px; */
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        /* padding: 20px; */
+        /* border: 1px solid #000; */
+      }
+      .bill-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      .bill-info div {
+        width: 48%;
+      }
+
+      .bill-info label {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .bill-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-size: 14px;
+        border: 1px solid #000;
+      }
+
+      .bill-table th,
+      .bill-table td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #000;
+        white-space: nowrap;
+      }
+
+      .bill-table th {
+        background-color: #e0e0e0;
+      }
+
+      .due-row,
+      .total-row {
+        font-weight: 600;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .space-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        page-break-after: always;
+      }
+      .m-0{
+        margin: 0;
+      }
+      .text-sm {
+        font-size: 14px;
+      }
+      @page {
+        size: 7.4in 10.11in; /* Set custom page size for portrait */
+    
+
+        /* margin: 10mm; */
+        /* margin: 10mm; Set margins */
+      }
+      /* Print Settings */
+      @media print {
+        body {
+          width: 98%;
+          margin-left: auto;
+          
+          /* margin-left: 2mm; */
+          /* transform: translate(-100px); */
+          padding: 0;
+        }
+        .text-sm {
+            font-size: 12px;
+        }
+        .space-between {
+          display: flex;
+          justify-content: space-between;
+        }
+        .container {
+          max-width: 100%;
+          margin: auto;
+          padding: 10px;
+          border: none;
+        }
+        .bill-table{
+            margin:0;
+
+        }
+        .bill-table th,
+        .bill-table td {
+          padding: 6px;
+        }
+        .header {
+            margin-top:10px;
+            /* background-color: red; */
+        }
+        button,
+        .social-icons {
+          display: none;
+        }
+        .signature{
+            text-align: center;
+        }
+        .signature strong {
+          /* border-top: 1px solid black; */
+            /* display: block; */
+            text-align: center;
+          padding: 0.5in;
+        }
+        .footer {
+          /* position: fixed; */
+          text-align: start;
+          /* bottom: 10mm; */
+          /* width: 98%; */
+          page-break-after: always;
+        }
+
+        @page {
+          size: 7.8in 10.11in; /* Keep the correct paper size */
+          /* margin: 10mm;  */
+          /* transform: translate(-100px); */
+          /* margin: -10mm; */
+        }
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        /* background-color: red; */
+      }
+      .logo-bill {
+        width: 80px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <center class="header">
+        <h3>
+          Kawish Educational Complex <br />
+        </h3>
+        <!-- <img src="./school-logo.png" class="logo-bill" alt="" /> -->
+        <!-- <p>Address: ....</p> -->
+    </center>
+      <div class="space-between text-sm">
+        <div>
+            <p><h4>Student Payment Bill</h4>ID: <span>297-AC3-871</span></p>
+        </div>
+          <label>Branch: <span>(Macroyan)</span><br />Date: 28-Dec-1999</label>
+      </div>
+      <hr />
+      <div class="bill-info text-sm m-0">
+        <div>
+          <!-- <label>Payment Date: <span>28-Dec-1999</span></label> -->
+          <label>Student Name: <span>Qareebullah</span></label>
+          <label>Father's Name: <span>Haji Ghamai</span></label>
+        </div>
+        <div>
+          <!-- <label>Gender: <span>Male</span></label> -->
+          <label>Class: <span>8</span></label>
+          <label>Phone: <span>+93 123 123 123 123</span></label>
+        </div>
+      </div>
+
+      <table class="bill-table m-0 text-sm">
+        <tr>
+          <th>Total Fees</th>
+          <!-- <th>Outstanding Dues</th> -->
+          <th>Paid Amount</th>
+          <th>Discount</th>
+        </tr>
+        <tr>
+          <td>800 AF</td>
+          <!-- <td>0</td> -->
+          <td>500 AF</td>
+          <td>100 AF</td>
+        </tr>
+        <tr>
+          <th>Remaining Dues</th>
+          <th>Total Due</th>
+          <th>Total Paid</th>
+        </tr>
+        <tr>
+          <td>200 AF</td>
+          <td>200 AF</td>
+          <td>500 AF</td>
+        </tr>
+      </table>
+      <p>
+          Twelve-Thousand and One-Hundrade paid by Qareebullah Atal for 8-3 class, in month January-2025
+      </p>
+      <br />
+      <div class="space-between text-sm">
+        <!-- <div class="signature">
+                <hr>
+              <strong>Recieved By: Hamza Nawabi</strong>
+            </div> -->
+        <div class="signature">
+          <hr />
+          <strong>Recieved By </strong><br>
+          <strong>Ehsan</strong>
+        </div>
+        <div class="signature">
+          <hr />
+          <strong>Manager</strong><br>
+          <strong>Qareeb</strong>
+        </div>
+      </div>
+      <div class="footer">
+        <label>Address: <span>12th street, Kabul, AF</span></label><br>
+        <label>Email: <span>info@gmail.com</span></label>,
+        <label>Phone: <span>1234567890</span></label><br>
+        <p>Thank you for your payment. The paid fee not refundable.</p>
+      </div>
+    </div>
+  </body>
+</html>

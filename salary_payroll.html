@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payroll Invoice</title>
+    <style>
+      .container {
+        width: 96%;
+        margin: auto;
+        height: auto;
+      }
+      table {
+        width: 98%; /* Ensure the table takes full width */
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin: auto;
+        margin-bottom: 5mm;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #000;
+        padding: 3mm 5mm; /* Increased left padding */
+        text-align: left;
+        width: 25%; /* Ensure table cells are balanced */
+      }
+
+      table th {
+        background-color: #f2f2f2;
+      }
+      .space-between {
+        display: flex;
+        justify-content: space-between;
+      }
+      .mb-0{
+            margin-bottom: 0;
+        }
+        .content-upper{
+            /* text-transform: uppercase; */
+            font-size: 18px;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: red; */
+        }
+        .logo-bill{
+            width: 140px;
+            height: auto;
+        }
+      @page {
+        size: 7.4in 8in; /* Set custom page size for portrait */
+        margin: 10mm; /* Set margins */
+      }
+      /* Print Styles */
+      @media print {
+        body {
+          font-size: 10pt;
+          margin: auto;
+          width: 100%;
+          padding: 0;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            /* background-color: red; */
+        }
+        .logo-bill{
+            width: 80px;
+            height: auto;
+        }
+        .container {
+          width: 96%;
+          margin: auto;
+          height: auto;
+        }
+        table {
+          width: 98%; /* Ensure the table takes full width */
+          border-collapse: collapse;
+          table-layout: fixed;
+          margin: auto;
+          margin-bottom: 5mm;
+        }
+
+        table th,
+        table td {
+          border: 1px solid #000;
+          padding: 3mm 5mm; /* Increased left padding */
+          text-align: left;
+          width: 25%; /* Ensure table cells are balanced */
+        }
+
+        table th {
+          background-color: #f2f2f2;
+        }
+        .space-between {
+          display: flex;
+          justify-content: space-between;
+        }
+        .content-upper{
+            /* text-transform: uppercase; */
+            font-size: 18px;
+        }
+        .signature strong{
+          /* border-top: 1px solid black; */
+          padding: .5in;
+        }
+        .mb-0{
+            margin-bottom: 0;
+        }
+        hr{
+            width: 90%;
+        }
+        
+        .footer {
+          /* position: fixed; */
+          /* bottom: 10mm; */
+          width: 98%;
+          page-break-after: always;
+        }
+        @page {
+          size: 7.4in 8in; /* Keep the correct paper size */
+          margin: 10mm; /* Set consistent margins */
+        }
+      }
+    </style>
+  </head>
+  <!-- <body onload="window.print();"> -->
+  <body>
+    <div class="payroll-details container">
+        <header>
+            <div>
+                <h1>Kawash Educational Complex</h1>
+                <h3>Branch (Makroyan)</h3>
+            </div>
+            <img src="./school-logo.png" class="logo-bill" alt="">
+        </header>
+        <h2 style="margin: 0;">Payroll </h2>
+        <div class="space-between">
+        <h4 class="mb-0">Payment Date: <strong>2025-03-12</strong></h4>
+        <h4 class="mb-0">Reciept No:DYR-4321-473</h4>
+      </div>
+      <hr style="width: 100%;" />
+      <h3>
+        Employee: Hamza Nawabi <br>
+        Salary for: 2025-Feb <br>
+        Salary Breakdown
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Salary Amount</th>
+            <th>Bonus</th>
+            <th>Deduction</th>
+            <th>Tax</th>
+            <th>Net Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12000-AF</td>
+            <td>200-AF</td>
+            <td>100-AF</td>
+            <td>2%</td>
+            <td>12100-AF</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="content-upper">Twelve-Thousand and One-Hundrade paid to Hamza Nawabi Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nihil.</p>
+      <br>
+      <br><br>
+      <div class="space-between footer">
+        <div class="signature">
+            <hr>
+          <strong>Recieved By: Hamza Nawabi</strong>
+        </div>
+        <div class="signature">
+            <hr>
+          <strong>Paid By: Finance</strong>
+        </div>
+        <div class="signature">
+            <hr>
+          <strong>Manager: Qreeb</strong>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
