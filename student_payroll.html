@@ -101,7 +101,7 @@
         body {
           width: 98%;
           margin-left: auto;
-          
+          max-height: fit-content;
           /* margin-left: 2mm; */
           /* transform: translate(-100px); */
           padding: 0;
@@ -184,22 +184,16 @@
       <div class="space-between text-sm">
         <div>
             <p><h4>Student Payment Bill</h4>ID: <span>297-AC3-871</span></p>
-        </div>
-          <label>Branch: <span>(Macroyan)</span><br />Date: 28-Dec-1999</label>
-      </div>
-      <hr />
-      <div class="bill-info text-sm m-0">
-        <div>
-          <!-- <label>Payment Date: <span>28-Dec-1999</span></label> -->
-          <label>Student Name: <span>Qareebullah</span></label>
-          <label>Father's Name: <span>Haji Ghamai</span></label>
+            <label>Student Name: <span>Qareebullah</span></label><br>
+            <label>Father's Name: <span>Haji Ghamai</span></label>
         </div>
         <div>
-          <!-- <label>Gender: <span>Male</span></label> -->
-          <label>Class: <span>8</span></label>
+          <label>Branch: <span>(Macroyan)</span><br />Date: 28-Dec-1999</label><br>
+          <label>Class: <span>8</span></label><br>
           <label>Phone: <span>+93 123 123 123 123</span></label>
         </div>
       </div>
+      <br>
 
       <table class="bill-table m-0 text-sm">
         <tr>
@@ -215,15 +209,14 @@
           <td>100 AF</td>
         </tr>
         <tr>
-          <th>Remaining Dues</th>
-          <th>Total Due</th>
-          <th>Total Paid</th>
+          <th>Remaining Dues</th> <!-- Takes two rows in one column -->
+          <th style="border: none;"  colspan="2">Total Due = 200</th>
         </tr>
         <tr>
-          <td>200 AF</td>
-          <td>200 AF</td>
-          <td>500 AF</td>
+          <td>200 AF</td> 
+          <th style="border: none;"  colspan="2">Total Paid = 500</th>
         </tr>
+
       </table>
       <p>
           Twelve-Thousand and One-Hundrade paid by Qareebullah Atal for 8-3 class, in month January-2025
